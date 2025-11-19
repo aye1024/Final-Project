@@ -2,13 +2,13 @@ package com.example;
 
 public class Player {
     private String name;
-    private Scorecard scorecard;
+    private Score[] scorecard;
     private int wins;
     private int losses;
 
     public Player(String name) {
         this.name = name;
-        scorecard = new Scorecard(name);
+        scorecard = {new Score("Ones"), new Score ()};
     }
 
     public String getName() {
