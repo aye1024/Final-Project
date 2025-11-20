@@ -37,7 +37,7 @@ public class App extends Application {
         launch();
     }
 
-    public static int[] checkCombos(ArrayList<Dice> dice) {
+    public static int[] checkCombos(ArrayList<Die> dice) {
         int[] calculatedScores = new int[14];
         int[] diceValues = new int[5];
         int[] numOccurences = new int[6];

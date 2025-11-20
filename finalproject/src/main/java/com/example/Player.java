@@ -7,15 +7,15 @@ public class Player {
     private int losses;
 
     public Player(String name) {
-        this.name = name;
-        scorecard = {new Score("Ones"), new Score ()};
+        this.name = name;     
+        scorecard = new Score[]{new Score("Ones"), new Score("Twos"), new Score("Threes"), new Score("Fours"), new Score("Fives"), new Score("Sixes"), new Score("Bonus"), new Score("Three of a Kind"), new Score("Four of a Kind"), new Score("Full House"), new Score("Small Straight"), new Score("Large Straight"), new Score("Yahtzee"), new Score("Chance")};
     }
 
     public String getName() {
         return name;
     }
 
-    public Scorecard getScorecard() {
+    public Score[] getScorecard() {
         return scorecard;
     }
 

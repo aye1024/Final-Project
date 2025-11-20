@@ -8,16 +8,12 @@ public class Score {
         this.name = name;
     }
 
-    public String nameProperty() {
+    public String getName() {
         return name;
     }
 
-    public String scoreProperty() {
+    public String getScore() {
         return Integer.toString(score);
-    }
-
-    public int getScore() {
-        return score;
     }
 
     public void setScore(int score) {
