@@ -9,16 +9,17 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SecondaryController">
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SecondaryController"  style="-fx-background-color: green;">
     <children>
-        <Label text="Yahtzee" />
+        <Label text="Yahtzee" style="-fx-font-family: 'Lexend'; -fx-font-size: 24px;"/>
         <HBox alignment="CENTER" spacing="20.0">
             <children>
                 <TableView fx:id="scoreTable" layoutX="100.0" layoutY="50.0" prefHeight="300.0" prefWidth="200.0">
                 <columns>
                     <TableColumn fx:id="scoreTypes" text="Score Types" prefWidth="100.0"/>
-                    <TableColumn fx:id="scores" text="Scores" prefWidth="100.0"/>
+                    <TableColumn fx:id="scores" text="Scores" prefWidth="100.0"/> 
                 </columns>
                 </TableView>
                 <VBox alignment="CENTER" spacing="20.0">
@@ -40,6 +41,18 @@
                                 <ImageView fx:id="d5" fitHeight="50" fitWidth="50" pickOnBounds="true" preserveRatio="true">
                                     <Image url="@img/die.jpg"/>
                                 </ImageView>
+                            </children>
+                            <padding>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            </padding>
+                        </HBox>
+                        <HBox>
+                            <children>
+                                <CheckBox fx:id="keepD1" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" text="Keep?" />
+                                <CheckBox fx:id="keepD2" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" text="Keep?" />
+                                <CheckBox fx:id="keepD3" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" text="Keep?" />
+                                <CheckBox fx:id="keepD4" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" text="Keep?" />
+                                <CheckBox fx:id="keepD5" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" text="Keep?" />
                             </children>
                             <padding>
                                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
