@@ -15,9 +15,12 @@
       </ImageView>
       <VBox alignment="CENTER" spacing="20.0"  style="-fx-font-family: 'Lexend';">
          <children>
-            <Label text="Yahtzee" />
+            <Label text="Yahtzee" style="-fx-font-family: 'Lexend'; -fx-font-size: 24px; -fx-text-fill: white;">
+               <VBox.margin>
+                  <Insets top="-20"/>
+               </VBox.margin>
+            </Label>
             <Button fx:id="primaryButton" text="Start" onAction="#startGame"/>
-            <Button fx:id="options" text="Options" onAction="#options"/>
             <Button fx:id="quit" text="Quit" onAction = "#quit"/>
          </children>
          <padding>

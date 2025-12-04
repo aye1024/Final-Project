@@ -7,7 +7,10 @@ public class Score {
 
     public Score(String name) {
         this.name = name;
-        scoreKept = false;
+        if (name.equals("Bonus"))
+            scoreKept = true;
+        else
+            scoreKept = false;
     }
 
     public String getName() {
@@ -18,12 +21,19 @@ public class Score {
         scoreKept = true;
     }
 
+    public boolean getScoreKept() {
+        return scoreKept;
+    }
+
     public String getScore() {
-        return Integer.toString(score);
+        if (scoreKept)
+            return Integer.toString(score);
+        else
+            return "Keep " + Integer.toString(score) + "?";
     }
 
     public void setScore(int score) {
-        if (!scoreKept)
+        if (!scoreKept || name.equals("Bonus"))
             this.score = score;
     }
 }

@@ -1,7 +1,6 @@
 package com.example;
 
-public class Die
-{
+public class Die {
     private String name;
     private int value;
     private boolean kept;
@@ -15,7 +14,12 @@ public class Die
 
     public void rollDie()
     {
-        value = (int)(Math.random() * 6 + 1);
+        if (!kept)
+            value = (int)(Math.random() * 6 + 1);
+    }
+
+    public boolean getKept() {
+        return kept;
     }
 
     public void setKept(boolean kept) {
