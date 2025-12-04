@@ -56,11 +56,6 @@ public class SecondaryController implements Initializable{
         p1Turn();
     }
 
-    // private void checkWin() {
-    //     if (turnNum > 13)
-    //         FXMLSceneSwitcher.loadScene("tertiary.fxml");
-    // }
-
     private void updateTurnNumber() {
         turnNumber.setText(String.format("Turn #%d", turnNum));
     }
@@ -163,7 +158,7 @@ public class SecondaryController implements Initializable{
         shuffleDice();
         updateScorecards();
         p2.setNumRolls(2);
-        rollsRemaining.setText(String.format("Player 2 has %s rolls left.", p1.getNumRolls()));
+        rollsRemaining.setText(String.format("Player 2 has %s rolls left.", p2.getNumRolls()));
     }
 
     @FXML
@@ -172,8 +167,31 @@ public class SecondaryController implements Initializable{
     }
 
     @FXML
-    private void options() throws IOException {
-        App.setRoot("tertiary");
+    private void endGame() throws IOException {
+        if (turnNum > 13) {
+            if (getP1Sum() > getP2Sum())
+                App.setRoot("tertiary");
+            else if (getP2Sum() > getP1Sum())
+                App.setRoot("p2win");
+            else
+                App.setRoot("tie");
+        }
+    }
+
+    private int getP1Sum() {
+        int sum = 0;
+        for (int i = 0; i < 14; i++) {
+            sum += p1.getScorecard()[i].getIntScore();
+        }
+        return sum;
+    }
+
+    private int getP2Sum() {
+        int sum = 0;
+        for (int i = 0; i < 14; i++) {
+            sum += p2.getScorecard()[i].getIntScore();
+        }
+        return sum;
     }
 
     @FXML

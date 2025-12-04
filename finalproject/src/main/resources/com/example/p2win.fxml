@@ -7,10 +7,10 @@
 <?import javafx.scene.control.Slider?>
 <?import javafx.geometry.Insets?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.TertiaryController">
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.P2WinController">
     <children>
-        <Label text="Player 1 Wins!" />
-        <Button fx:id="tertiaryButton" text="To Main Menu" onAction="#toMainMenu" />
+        <Label text="Player 2 Wins!" />
+        <Button fx:id="toMainMenu" text="To Main Menu" onAction="#toMainMenu" />
     </children>
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

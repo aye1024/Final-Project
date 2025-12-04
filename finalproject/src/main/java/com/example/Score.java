@@ -25,6 +25,10 @@ public class Score {
         return scoreKept;
     }
 
+    public int getIntScore() {
+        return score;
+    }
+
     public String getScore() {
         if (scoreKept)
             return Integer.toString(score);

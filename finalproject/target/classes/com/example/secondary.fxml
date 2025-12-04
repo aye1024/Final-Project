@@ -11,94 +11,104 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.CheckBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SecondaryController"  style="-fx-background-color: green;">
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SecondaryController" style="-fx-background-color: green;">
     <children>
         <Label text="Yahtzee" style="-fx-font-family: 'Lexend'; -fx-font-size: 24px; -fx-text-fill: white;"/>
+        
         <HBox alignment="CENTER" spacing="20.0">
             <children>
-                <TableView fx:id="p1ScoreTable" layoutX="100.0" layoutY="50.0" prefHeight="300.0" prefWidth="200.0">
-                <columns>
-                    <TableColumn fx:id="p1ScoreTypes" text="Score Types" prefWidth="100.0"/>
-                    <TableColumn fx:id="p1Scores" text="P1 Scores" prefWidth="100.0"/> 
-                </columns>
+                <TableView fx:id="p1ScoreTable" prefHeight="300.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="p1ScoreTypes" text="Score Types" prefWidth="100.0"/>
+                        <TableColumn fx:id="p1Scores" text="P1 Scores" prefWidth="100.0"/>
+                    </columns>
                 </TableView>
 
-                <TableView fx:id="p2ScoreTable" layoutX="100.0" layoutY="50.0" prefHeight="300.0" prefWidth="200.0">
-                <columns>
-                    <TableColumn fx:id="p2ScoreTypes" text="Score Types" prefWidth="100.0"/>
-                    <TableColumn fx:id="p2Scores" text="P2 Scores" prefWidth="100.0"/> 
-                </columns>
+                <TableView fx:id="p2ScoreTable" prefHeight="300.0" prefWidth="200.0">
+                    <columns>
+                        <TableColumn fx:id="p2ScoreTypes" text="Score Types" prefWidth="100.0"/>
+                        <TableColumn fx:id="p2Scores" text="P2 Scores" prefWidth="100.0"/>
+                    </columns>
                 </TableView>
-                
+
                 <VBox alignment="CENTER" spacing="20.0">
                     <children>
-                        <HBox alignment="CENTER" spacing="5.0">
+                        <HBox alignment="CENTER" spacing="20.0">
                             <children>
-                                <Label fx:id="whoTurn" text="Player 1's Turn"/>
-                                <Label fx:id="turnNumber" text="Turn #1"/>
+                                <Label fx:id="whoTurn" text="Player 1's Turn" style="-fx-font-family: 'Lexend'; -fx-font-size: 18px; -fx-text-fill: white;"/>
+                                <Label fx:id="turnNumber" text="Turn #1" style="-fx-font-family: 'Lexend'; -fx-font-size: 18px; -fx-text-fill: white;"/>
                             </children>
                             <padding>
-                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
                             </padding>
                         </HBox>
+
+                        
                         <HBox alignment="CENTER" spacing="5.0">
                             <children>
-                                <ImageView fx:id="d1" fitHeight="50" fitWidth="50" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="d1" fitHeight="50" fitWidth="50" preserveRatio="true">
                                     <Image url="@img/die.jpg"/>
                                 </ImageView>
-                                <ImageView fx:id="d2" fitHeight="50" fitWidth="50" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="d2" fitHeight="50" fitWidth="50" preserveRatio="true">
                                     <Image url="@img/die.jpg"/>
                                 </ImageView>
-                                <ImageView fx:id="d3" fitHeight="50" fitWidth="50" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="d3" fitHeight="50" fitWidth="50" preserveRatio="true">
                                     <Image url="@img/die.jpg"/>
                                 </ImageView>
-                                <ImageView fx:id="d4" fitHeight="50" fitWidth="50" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="d4" fitHeight="50" fitWidth="50" preserveRatio="true">
                                     <Image url="@img/die.jpg"/>
                                 </ImageView>
-                                <ImageView fx:id="d5" fitHeight="50" fitWidth="50" pickOnBounds="true" preserveRatio="true">
+                                <ImageView fx:id="d5" fitHeight="50" fitWidth="50" preserveRatio="true">
                                     <Image url="@img/die.jpg"/>
                                 </ImageView>
                             </children>
                             <padding>
-                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
                             </padding>
                         </HBox>
+
+                        
                         <HBox alignment="CENTER" spacing="5.0">
                             <children>
-                                <CheckBox fx:id="c1" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" text="Keep?" onAction="#setD1"/>
-                                <CheckBox fx:id="c2" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" text="Keep?" onAction="#setD2"/>
-                                <CheckBox fx:id="c3" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" text="Keep?" onAction="#setD3"/>
-                                <CheckBox fx:id="c4" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" text="Keep?" onAction="#setD4"/>
-                                <CheckBox fx:id="c5" layoutX="100.0" layoutY="100.0" mnemonicParsing="false" text="Keep?" onAction="#setD5"/>
+                                <CheckBox fx:id="c1" text="Keep?" onAction="#setD1"/>
+                                <CheckBox fx:id="c2" text="Keep?" onAction="#setD2"/>
+                                <CheckBox fx:id="c3" text="Keep?" onAction="#setD3"/>
+                                <CheckBox fx:id="c4" text="Keep?" onAction="#setD4"/>
+                                <CheckBox fx:id="c5" text="Keep?" onAction="#setD5"/>
                             </children>
                             <padding>
-                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                <Insets top="20.0" bottom="20.0"/>
                             </padding>
                         </HBox>
-                        <Button fx:id="roll" text="Roll Dice" onAction = "#rollDice"/>
-                        <Label fx:id="rollsRemaining" text="You have 2 rolls left."/>
+
+                        <Button fx:id="roll" text="Roll Dice" onAction="#rollDice"/>
+                        <Label fx:id="rollsRemaining" text="You have 2 rolls left." style="-fx-font-family: 'Lexend'; -fx-font-size: 18px; -fx-text-fill: white;"/>
                     </children>
+                    
                     <padding>
-                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
                     </padding>
                 </VBox>
             </children>
+            
             <padding>
-                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
             </padding>
         </HBox>
+
         <HBox alignment="CENTER" spacing="20.0">
             <children>
-                <Button fx:id="secondaryButton" text="To Main Menu" onAction="#toMainMenu" />
-                <Button fx:id="options" text="Options" onAction="#options"/>
-                <Button fx:id="quit" text="Quit" onAction = "#quit"/>
+                <Button fx:id="secondaryButton" text="To Main Menu" onAction="#toMainMenu"/>
+                <Button fx:id="gameEnd" text="Game Over?" onAction="#endGame"/>
+                <Button fx:id="quit" text="Quit" onAction="#quit"/>
             </children>
             <padding>
-                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
             </padding>
         </HBox>
     </children>
+
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
     </padding>
 </VBox>
