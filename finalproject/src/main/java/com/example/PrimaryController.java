@@ -14,6 +14,11 @@ public class PrimaryController {
     }
 
     @FXML
+    private void tutorial() throws IOException {
+        App.setRoot("howtoplay");
+    }
+
+    @FXML
     private void quit(ActionEvent event) throws IOException {
         Node source = (Node) event.getSource();
         Stage stage = (Stage) source.getScene().getWindow();

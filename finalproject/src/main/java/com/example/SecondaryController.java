@@ -170,7 +170,7 @@ public class SecondaryController implements Initializable{
     private void endGame() throws IOException {
         if (turnNum > 13) {
             if (getP1Sum() > getP2Sum())
-                App.setRoot("tertiary");
+                App.setRoot("p1win");
             else if (getP2Sum() > getP1Sum())
                 App.setRoot("p2win");
             else

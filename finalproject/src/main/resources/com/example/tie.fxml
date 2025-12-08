@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.Label?>
@@ -7,10 +9,13 @@
 <?import javafx.scene.control.Slider?>
 <?import javafx.geometry.Insets?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.TieController">
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.TieController" style="-fx-background-color: green;">
     <children>
-        <Label text="Tie!" />
-        <Button fx:id="toMainMenu" text="To Main Menu" onAction="#toMainMenu" />
+        <Label text="Tie!" style="-fx-font-family: 'Lexend'; -fx-font-size: 100px; -fx-text-fill: white;"/>
+        <ImageView fitHeight="300" fitWidth="300" pickOnBounds="true" preserveRatio="true">
+            <Image url="@img/laughing_baby.jpg"/>
+        </ImageView>
+        <Button fx:id="toMainMenu" text="To Main Menu" style="-fx-font-family: 'Lexend'; -fx-font-size: 50px; -fx-text-fill: black;" onAction="#toMainMenu" />
     </children>
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
