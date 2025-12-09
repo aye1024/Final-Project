@@ -38,7 +38,30 @@ Open the repository in VSCode and type "mvn javafx:run" in the terminal. Make su
 
 
 **Interacting With the Game**
-To interact with buttons, checkboxes, and the Scorecard, simply point and click using the mouse. If you aren't familiar with the rules of Yahtzee, there is a helpful tutorial image in the "How to Play" section of the main menu.
+
+![Screenshot of the main menu of the game.](/images/main_menu.png)
+
+After launching the game, you will be brought to the main menu. If you aren't sure how to play Yahtzee, click the "How to Play" button. Otherwise, press "Start" to start a new game.
+
+![Screenshot of keeping dice.](/images/keeping_dice.png)
+
+In Yahtzee, players can choose to keep dice and reroll the others. To keep a specific dice, click the "Keep?" checkbox found under the corresponding die.
+
+![Screenshot of rolling dice.](/images/re-rolling.png)
+
+To reroll your dice, simply press the "Roll Dice" button. At the start of each turn, one of your dice rolls will automatically be used. However, you may reroll the dice up to two times. 
+
+![Screenshot of keeping score.](/images/keeping_score.png)
+
+To keep score, click the score on your scoreboard that you wish to keep. This will automatically end your turn, and the next player will play using their own corresponding scoreboard.
+
+![Screenshot of ending a game.](/images/ending_game.png)
+
+To end the game, press the "Game End?" button once the game reaches Turn #14 and all scores on the scoreboards are kept. This will take you to the game end screen.
+
+![Screenshot of end screen.](/images/game_over.png)
+
+The game is over! The winner will be announced and you may return to the main menu.
 
 **Major Features**
 1. Point calculations and Scoreboard updates for each dice roll are automatic
