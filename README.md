@@ -34,6 +34,7 @@ There are no known bugs/limiations of our project outside of the ommitted/modifi
 ### User Guide
 
 **Launching the Game**
+
 Open the repository in VSCode and type "mvn javafx:run" in the terminal. Make sure you are in the folder with the "pom.xml" file.
 
 
