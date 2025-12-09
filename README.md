@@ -58,7 +58,7 @@ To keep score, click the score on your scoreboard that you wish to keep. This wi
 
 ![Screenshot of ending a game.](/images/ending_game.png)
 
-To end the game, press the "Game End?" button once the game reaches Turn #14 and all scores on the scoreboards are kept. This will take you to the game end screen.
+To end the game, press the "Game Over?" button once the game reaches Turn #14 and all scores on the scoreboards are kept. This will take you to the game end screen.
 
 ![Screenshot of end screen.](/images/game_over.png)
 
