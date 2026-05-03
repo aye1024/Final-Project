@@ -15,7 +15,6 @@
     -fx-font-size: 76px;
     -fx-font-weight: 800;
     -fx-text-fill: #fff7df;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 18, 0.25, 0, 4);
 }
 
 .subtitle-label,
@@ -41,7 +40,6 @@
     -fx-border-color: rgba(255, 255, 255, 0.28);
     -fx-border-radius: 8;
     -fx-border-width: 1;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.22), 24, 0.18, 0, 8);
 }
 
 .menu-panel,
@@ -53,11 +51,6 @@
 .score-panel,
 .play-panel {
     -fx-padding: 18;
-}
-
-.menu-image,
-.result-image {
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.38), 18, 0.18, 0, 5);
 }
 
 .button {
@@ -114,10 +107,6 @@
     -fx-border-color: rgba(255, 255, 255, 0.18);
     -fx-border-radius: 8;
     -fx-padding: 18;
-}
-
-.die-face {
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.45), 12, 0.16, 0, 4);
 }
 
 .keep-box {
@@ -185,8 +174,4 @@
 
 .score-value {
     -fx-alignment: CENTER;
-}
-
-.help-image {
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.28), 20, 0.18, 0, 6);
 }
