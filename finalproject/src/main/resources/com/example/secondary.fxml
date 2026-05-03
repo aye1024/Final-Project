@@ -1,113 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SecondaryController" style="-fx-background-color: green;">
+<VBox alignment="CENTER" spacing="20.0" styleClass="game-root" stylesheets="@yahtzee.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SecondaryController">
     <children>
-        <Label text="Yahtzee" style="-fx-font-family: 'Lexend'; -fx-font-size: 100px; -fx-text-fill: white;"/>
-        
+        <Label styleClass="title-label" text="Yahtzee" />
+
         <HBox alignment="CENTER" spacing="20.0">
             <children>
-                <TableView fx:id="p1ScoreTable" prefHeight="350.0" prefWidth="200.0">
-                    <columns>
-                        <TableColumn fx:id="p1ScoreTypes" text="Score Types" prefWidth="100.0"/>
-                        <TableColumn fx:id="p1Scores" text="P1 Scores" prefWidth="100.0"/>
-                    </columns>
-                </TableView>
-
-                <TableView fx:id="p2ScoreTable" prefHeight="350.0" prefWidth="200.0">
-                    <columns>
-                        <TableColumn fx:id="p2ScoreTypes" text="Score Types" prefWidth="100.0"/>
-                        <TableColumn fx:id="p2Scores" text="P2 Scores" prefWidth="100.0"/>
-                    </columns>
-                </TableView>
-
-                <VBox alignment="CENTER" spacing="20.0">
+                <VBox alignment="CENTER" spacing="10.0" styleClass="score-panel">
                     <children>
-                        <HBox alignment="CENTER" spacing="100.0">
+                        <Label styleClass="subtitle-label" text="Player 1" />
+                        <TableView fx:id="p1ScoreTable" prefHeight="450.0" prefWidth="230.0">
+                            <columns>
+                                <TableColumn fx:id="p1ScoreTypes" prefWidth="142.0" text="Score Type" />
+                                <TableColumn fx:id="p1Scores" prefWidth="84.0" styleClass="score-value" text="Score" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+
+                <VBox alignment="CENTER" maxWidth="660.0" spacing="22.0" styleClass="play-panel">
+                    <children>
+                        <HBox alignment="CENTER" spacing="72.0">
                             <children>
-                                <Label fx:id="whoTurn" text="Player 1's Turn" style="-fx-font-family: 'Lexend'; -fx-font-size: 25px; -fx-text-fill: white;"/>
-                                <Label fx:id="turnNumber" text="Turn #1" style="-fx-font-family: 'Lexend'; -fx-font-size: 25px; -fx-text-fill: white;"/>
+                                <Label fx:id="whoTurn" styleClass="status-label" text="Player 1's Turn" />
+                                <Label fx:id="turnNumber" styleClass="status-label" text="Turn #1" />
                             </children>
-                            <padding>
-                                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
-                            </padding>
                         </HBox>
 
-                        
-                        <HBox alignment="CENTER" spacing="5.0">
+                        <HBox alignment="CENTER" spacing="14.0" styleClass="dice-tray">
                             <children>
-                                <ImageView fx:id="d1" fitHeight="100" fitWidth="100" preserveRatio="true">
-                                    <Image url="@img/die.jpg"/>
+                                <ImageView fx:id="d1" fitHeight="104.0" fitWidth="104.0" preserveRatio="true" styleClass="die-face">
+                                    <Image url="@img/pip1.png" />
                                 </ImageView>
-                                <ImageView fx:id="d2" fitHeight="100" fitWidth="100" preserveRatio="true">
-                                    <Image url="@img/die.jpg"/>
+                                <ImageView fx:id="d2" fitHeight="104.0" fitWidth="104.0" preserveRatio="true" styleClass="die-face">
+                                    <Image url="@img/pip2.png" />
                                 </ImageView>
-                                <ImageView fx:id="d3" fitHeight="100" fitWidth="100" preserveRatio="true">
-                                    <Image url="@img/die.jpg"/>
+                                <ImageView fx:id="d3" fitHeight="104.0" fitWidth="104.0" preserveRatio="true" styleClass="die-face">
+                                    <Image url="@img/pip3.png" />
                                 </ImageView>
-                                <ImageView fx:id="d4" fitHeight="100" fitWidth="100" preserveRatio="true">
-                                    <Image url="@img/die.jpg"/>
+                                <ImageView fx:id="d4" fitHeight="104.0" fitWidth="104.0" preserveRatio="true" styleClass="die-face">
+                                    <Image url="@img/pip4.png" />
                                 </ImageView>
-                                <ImageView fx:id="d5" fitHeight="100" fitWidth="100" preserveRatio="true">
-                                    <Image url="@img/die.jpg"/>
+                                <ImageView fx:id="d5" fitHeight="104.0" fitWidth="104.0" preserveRatio="true" styleClass="die-face">
+                                    <Image url="@img/pip5.png" />
                                 </ImageView>
                             </children>
-                            <padding>
-                                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
-                            </padding>
-                        </HBox>
-                        
-                        <HBox alignment="CENTER" spacing="60.0">
-                            <children>
-                                <CheckBox fx:id="c1" text="Keep?" style="-fx-font-family: 'Lexend'; -fx-font-size: 12.5px; -fx-text-fill: white;" onAction="#setD1"/>
-                                <CheckBox fx:id="c2" text="Keep?" style="-fx-font-family: 'Lexend'; -fx-font-size: 12.5px; -fx-text-fill: white;" onAction="#setD2"/>
-                                <CheckBox fx:id="c3" text="Keep?" style="-fx-font-family: 'Lexend'; -fx-font-size: 12.5px; -fx-text-fill: white;" onAction="#setD3"/>
-                                <CheckBox fx:id="c4" text="Keep?" style="-fx-font-family: 'Lexend'; -fx-font-size: 12.5px; -fx-text-fill: white;" onAction="#setD4"/>
-                                <CheckBox fx:id="c5" text="Keep?" style="-fx-font-family: 'Lexend'; -fx-font-size: 12.5px; -fx-text-fill: white;" onAction="#setD5"/>
-                            </children>
-                            <padding>
-                                <Insets top="20.0" bottom="20.0"/>
-                            </padding>
                         </HBox>
 
-                        <Button fx:id="roll" text="Roll Dice" onAction="#rollDice" style="-fx-font-family: 'Lexend'; -fx-font-size: 25px; -fx-text-fill: black;"/>
-                        <Label fx:id="rollsRemaining" text="You have 2 rolls left." style="-fx-font-family: 'Lexend'; -fx-font-size: 25px; -fx-text-fill: white;"/>
-                    </children> 
-                    
-                    <padding>
-                        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
-                    </padding>
+                        <HBox alignment="CENTER" spacing="48.0">
+                            <children>
+                                <CheckBox fx:id="c1" onAction="#setD1" styleClass="keep-box" text="Keep" />
+                                <CheckBox fx:id="c2" onAction="#setD2" styleClass="keep-box" text="Keep" />
+                                <CheckBox fx:id="c3" onAction="#setD3" styleClass="keep-box" text="Keep" />
+                                <CheckBox fx:id="c4" onAction="#setD4" styleClass="keep-box" text="Keep" />
+                                <CheckBox fx:id="c5" onAction="#setD5" styleClass="keep-box" text="Keep" />
+                            </children>
+                        </HBox>
+
+                        <Button fx:id="roll" onAction="#rollDice" text="Roll Dice" />
+                        <Label fx:id="rollsRemaining" styleClass="small-label" text="You have 2 rolls left." />
+                    </children>
+                </VBox>
+
+                <VBox alignment="CENTER" spacing="10.0" styleClass="score-panel">
+                    <children>
+                        <Label styleClass="subtitle-label" text="Player 2" />
+                        <TableView fx:id="p2ScoreTable" prefHeight="450.0" prefWidth="230.0">
+                            <columns>
+                                <TableColumn fx:id="p2ScoreTypes" prefWidth="142.0" text="Score Type" />
+                                <TableColumn fx:id="p2Scores" prefWidth="84.0" styleClass="score-value" text="Score" />
+                            </columns>
+                        </TableView>
+                    </children>
                 </VBox>
             </children>
-            
-            <padding>
-                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
-            </padding>
         </HBox>
 
-        <HBox alignment="CENTER" spacing="20.0">
+        <HBox alignment="CENTER" spacing="18.0">
             <children>
-                <Button fx:id="secondaryButton" text="To Main Menu" onAction="#toMainMenu" style="-fx-font-family: 'Lexend'; -fx-font-size: 25px; -fx-text-fill: black;"/>
-                <Button fx:id="gameEnd" text="Game Over?" onAction="#endGame" style="-fx-font-family: 'Lexend'; -fx-font-size: 25px; -fx-text-fill: black;"/>
-                <Button fx:id="quit" text="Quit" onAction="#quit" style="-fx-font-family: 'Lexend'; -fx-font-size: 25px; -fx-text-fill: black;"/>
+                <Button fx:id="secondaryButton" onAction="#toMainMenu" styleClass="secondary-button" text="Main Menu" />
+                <Button fx:id="gameEnd" onAction="#endGame" styleClass="secondary-button" text="Game Over?" />
+                <Button fx:id="quit" onAction="#quit" styleClass="danger-button" text="Quit" />
             </children>
-            <padding>
-                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
-            </padding>
         </HBox>
     </children>
 
     <padding>
-        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+        <Insets bottom="28.0" left="28.0" right="28.0" top="28.0" />
     </padding>
 </VBox>

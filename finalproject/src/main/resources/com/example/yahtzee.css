@@ -1,0 +1,192 @@
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-background-color:
+        radial-gradient(center 50% 35%, radius 90%, #2b9a5c, #155b37 58%, #0d3326 100%);
+}
+
+.menu-root,
+.game-root,
+.result-root,
+.help-root {
+    -fx-padding: 42;
+}
+
+.title-label {
+    -fx-font-size: 76px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #fff7df;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 18, 0.25, 0, 4);
+}
+
+.subtitle-label,
+.status-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #fff7df;
+}
+
+.small-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #fff7df;
+}
+
+.menu-panel,
+.score-panel,
+.play-panel,
+.result-panel,
+.help-panel {
+    -fx-background-color: rgba(255, 255, 255, 0.13);
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(255, 255, 255, 0.28);
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.22), 24, 0.18, 0, 8);
+}
+
+.menu-panel,
+.result-panel,
+.help-panel {
+    -fx-padding: 30;
+}
+
+.score-panel,
+.play-panel {
+    -fx-padding: 18;
+}
+
+.menu-image,
+.result-image {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.38), 18, 0.18, 0, 5);
+}
+
+.button {
+    -fx-background-color: linear-gradient(#fff4c4, #f2c14e);
+    -fx-background-radius: 7;
+    -fx-border-color: #7a4e12;
+    -fx-border-radius: 7;
+    -fx-border-width: 1.5;
+    -fx-cursor: hand;
+    -fx-font-size: 22px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2a24;
+    -fx-padding: 10 26;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#fff9dc, #ffd76b);
+}
+
+.button:pressed {
+    -fx-background-color: #dca83a;
+    -fx-translate-y: 1;
+}
+
+.secondary-button {
+    -fx-background-color: linear-gradient(#fff4c4, #f2c14e);
+    -fx-background-radius: 7;
+    -fx-border-color: #7a4e12;
+    -fx-border-radius: 7;
+    -fx-border-width: 1.5;
+    -fx-cursor: hand;
+    -fx-font-size: 18px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2a24;
+    -fx-padding: 8 20;
+}
+
+.danger-button {
+    -fx-background-color: linear-gradient(#ffd8cc, #e76f51);
+    -fx-background-radius: 7;
+    -fx-border-color: #8f2f1d;
+    -fx-border-radius: 7;
+    -fx-border-width: 1.5;
+    -fx-cursor: hand;
+    -fx-font-size: 22px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #1f2a24;
+    -fx-padding: 10 26;
+}
+
+.dice-tray {
+    -fx-background-color: rgba(0, 0, 0, 0.22);
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(255, 255, 255, 0.18);
+    -fx-border-radius: 8;
+    -fx-padding: 18;
+}
+
+.die-face {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.45), 12, 0.16, 0, 4);
+}
+
+.keep-box {
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #fff7df;
+}
+
+.keep-box .box {
+    -fx-background-color: #fffdf4;
+    -fx-border-color: #f2c14e;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.keep-box:selected .mark {
+    -fx-background-color: #155b37;
+}
+
+.table-view {
+    -fx-background-color: #fffdf4;
+    -fx-background-radius: 8;
+    -fx-border-color: #d2a94b;
+    -fx-border-radius: 8;
+    -fx-border-width: 2;
+    -fx-padding: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f2c14e;
+    -fx-background-radius: 6 6 0 0;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #253328;
+}
+
+.table-row-cell {
+    -fx-background-color: #fffdf4;
+    -fx-cell-size: 30px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f7efd8;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #dff1d5;
+}
+
+.table-cell {
+    -fx-font-size: 13px;
+    -fx-text-fill: #253328;
+    -fx-alignment: CENTER_LEFT;
+    -fx-border-color: transparent #ead8a6 transparent transparent;
+    -fx-padding: 5 8;
+}
+
+.score-value {
+    -fx-alignment: CENTER;
+}
+
+.help-image {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.28), 20, 0.18, 0, 6);
+}

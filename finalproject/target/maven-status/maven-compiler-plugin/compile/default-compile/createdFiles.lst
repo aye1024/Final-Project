@@ -1,4 +1,13 @@
+com\example\Player.class
+com\example\HowToPlayController.class
 com\example\SecondaryController$2.class
+module-info.class
+com\example\App.class
+com\example\PrimaryController.class
+com\example\SecondaryController.class
 com\example\Die.class
+com\example\Score.class
 com\example\P1WinController.class
 com\example\SecondaryController$1.class
+com\example\P2WinController.class
+com\example\TieController.class
